@@ -39,7 +39,7 @@ public class TechJobsTest {
 
     @Test
     public void testPrintJobs() throws IOException {
-        String input = "0\n2\nBuzzbold\nx";
+        String input = "0\r\n2\r\nBuzzbold\r\nx";
         String output = runProgramWithInput(input);
         String expected = getFileContents("src/test/resources/testPrintJobs.txt");
         assertEquals(expected, output);
@@ -47,7 +47,7 @@ public class TechJobsTest {
 
     @Test
     public void testPrintJobsNoResults() throws IOException {
-        String input = "0\n2\nChicago\nx";
+        String input = "0\r\n2\r\nChicago\r\nx";
         String output = runProgramWithInput(input);
         String expected = getFileContents("src/test/resources/testPrintJobsNoResults.txt");
         assertEquals(expected, output);
@@ -55,7 +55,7 @@ public class TechJobsTest {
 
     @Test
     public void testFindByValue() throws IOException {
-        String input = "0\n0\nRuby\nx";
+        String input = "0\r\n0\r\nRuby\r\nx";
         String output = runProgramWithInput(input);
         String expected = getFileContents("src/test/resources/testFindByValue.txt");
         assertEquals(expected, output);
@@ -63,7 +63,7 @@ public class TechJobsTest {
 
     @Test
     public void testCaseInsensitiveSearch() throws IOException {
-        String input = "0\n3\nnew YORk\nx";
+        String input = "0\r\n3\r\nnew YORk\r\nx";
         String output = runProgramWithInput(input);
         String expected = getFileContents("src/test/resources/testCaseInsensitiveSearch.txt");
         assertEquals(expected, output);
