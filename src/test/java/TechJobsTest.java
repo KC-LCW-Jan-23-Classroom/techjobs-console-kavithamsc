@@ -42,7 +42,7 @@ public class TechJobsTest {
         String input = "0\r\n2\r\nBuzzbold\r\nx";
         String output = runProgramWithInput(input);
         String expected = getFileContents("src/test/resources/testPrintJobs.txt");
-        assertEquals(expected, output);
+        assertEquals(expected.replaceAll("\r", ""), output.replaceAll("\r", ""));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class TechJobsTest {
         String input = "0\r\n2\r\nChicago\r\nx";
         String output = runProgramWithInput(input);
         String expected = getFileContents("src/test/resources/testPrintJobsNoResults.txt");
-        assertEquals(expected, output);
+        assertEquals(expected.replaceAll("\r", ""), output.replaceAll("\r", ""));
     }
 
     @Test
@@ -58,7 +58,7 @@ public class TechJobsTest {
         String input = "0\r\n0\r\nRuby\r\nx";
         String output = runProgramWithInput(input);
         String expected = getFileContents("src/test/resources/testFindByValue.txt");
-        assertEquals(expected, output);
+        assertEquals(expected.replaceAll("\r", ""), output.replaceAll("\r", ""));
     }
 
     @Test
@@ -66,7 +66,7 @@ public class TechJobsTest {
         String input = "0\r\n3\r\nnew YORk\r\nx";
         String output = runProgramWithInput(input);
         String expected = getFileContents("src/test/resources/testCaseInsensitiveSearch.txt");
-        assertEquals(expected, output);
+        assertEquals(expected.replaceAll("\r", ""), output.replaceAll("\r", ""));
     }
 
 
